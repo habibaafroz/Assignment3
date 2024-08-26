@@ -15,52 +15,75 @@
     <title>Rinterio</title>
 </head>
 <body>
-    <header class="container mx-auto">
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
-                    </div>
-                  </div>
-                  <a class="btn btn-ghost text-3xl font-bold"> 
-                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-lime-400 -rotate-45">
-                        <i class="fa-solid fa-arrow-right"></i> </div>
-                    Rinterio</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                      <li><a>Home</a></li>
-                      <li><a>Services</a></li>
-                      <li><a>Portfolio</a></li>
-                      <li><a>Blogs</a></li>
-                      <li><a>Contact Us</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end flex space-x-5">
-                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 shadow">
-                    <i class="fa-solid fa-magnifying-glass"></i> </div>
-                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 shadow">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                  
-                    <a class="btn bg-lime-400 text-lg font-500">Book Consult 
-                    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white -rotate-45">
-                        <i class="fa-solid fa-arrow-right"></i></div>
-                </a>
-                </div>
+    <header class="max-w-screen-xl mx-auto px-10"></header>
+    <!--navbar-->
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <!-- Logo -->
+          <a class="btn btn-ghost text-3xl font-bold">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-lime-400 -rotate-45">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            Rinterio
+          </a>
+        </div>
+      
+        <!-- Navbar center (menu links) hidden on mobile -->
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>Services</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Blogs</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+      
+        <!-- Navbar end (dropdown menu toggle button for mobile, search, cart, button for desktop) -->
+        <div class="navbar-end flex lg:space-x-5">
+          <!-- Mobile menu toggle button -->
+          <div class="dropdown lg:hidden">
+            <div tabindex="0" role="button" class="btn btn-ghost" id="menuToggle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Desktop items (search, cart, book consult button) hidden on mobile -->
+          <div class="hidden lg:flex items-center space-x-5">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 shadow">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-50 shadow">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <a class="btn bg-lime-400 text-lg font-500">
+              Book Consult
+              <div class="flex items-center justify-center w-8 h-8 rounded-full bg-black text-white -rotate-45">
+                <i class="fa-solid fa-arrow-right"></i>
               </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
     </header>
 
     <body>
@@ -68,19 +91,22 @@
         <div class="flex items-center justify-center">
             <img src="assets/banner.png" alt="">
         </div>
-        <div><p class="font-extrabold flex items-center justify-center text-center text-7xl">A barn house of this design has a <br> striking appearance </p>
-        <br>
-        <p class="font-normal flex items-center justify-center text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal <br> accents, and large windows that flood the space with natural light.</div>
-
+        <div class="sm:text-base md:text-lg lg:text-xl px-4"> <!-- Added padding to prevent text from touching screen edges -->
+            <p class="font-extrabold text-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl break-words">
+              A barn house of this design has a
+              <br class="hidden sm:block"> <!-- This line break is hidden on smaller screens -->
+              striking appearance
+            </p>
+          
             <br>
-
-        <div class="flex items-center justify-center">
-            <a class="btn bg-lime-200 text-lg font-500 rounded-full">View Details
-                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-lime-500 text-white -rotate-45">
-                    <i class="fa-solid fa-arrow-right"></i></div>
-            </a>
-        </div>
-        <br><br><br><br>
+          
+            <p class="font-normal text-center text-sm sm:text-base break-words">
+              The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal
+              <br class="hidden sm:block"> <!-- This line break is hidden on smaller screens -->
+              accents, and large windows that flood the space with natural light.
+            </p>
+          </div>
+          
 
 
         
@@ -347,6 +373,11 @@
         </div>
     </div>
 </div>
+
+
+<!--footer-->
+
+
 <footer>
     <div class="bg-black relative"> <br>
         <a class="flex items-center justify-center btn btn-ghost text-2xl font-bold text-white"> 
